@@ -472,7 +472,7 @@ class VectorStoreBenchmark:
             latencies.append(response.query_time_ms)
             result_ids = [r.id for r in response.results]
 
-            for k in k_values:
+            for k in actual_k_values:
                 top_k_results = set(result_ids[:k])
                 top_k_expected = set(expected[:k])
                 if top_k_expected:
